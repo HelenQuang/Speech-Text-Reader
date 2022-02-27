@@ -1,33 +1,63 @@
-@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
-body {
-  background: #ffefea;
-  font-family: "Lato", sans-serif;
-  min-height: 100vh;
-  margin: 0;
+:root {
+  --primary-color: #ffd9aa;
+  --secondary-color: #855928;
 }
 
-h1 {
+body {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding-bottom: 100px;
+  font-size: 20px;
+  width: 1000px;
+}
+
+main {
+  align-self: center;
+  margin-left: 900px;
+}
+
+main h1 {
   text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+img {
+  width: 585px;
 }
 
 .container {
   margin: auto;
-  padding: 20px;
+  width: 400px;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.096);
+  margin-left: 750px;
+  align-self: center;
 }
 
 .btn {
   cursor: pointer;
-  background-color: darksalmon;
+  background-color: var(--secondary-color);
   border: 0;
   border-radius: 4px;
   color: #fff;
   font-size: 16px;
   padding: 8px;
+  font-family: "Quicksand", sans-serif;
 }
 
 .btn:active {
@@ -46,13 +76,14 @@ select:focus {
 }
 
 .text-box {
+  font-family: "Quicksand", sans-serif;
   width: 70%;
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -800px);
-  background-color: #333;
-  color: #fff;
+  background-color: #f6b668;
+  color: var(--secondary-color);
   padding: 20px;
   border-radius: 5px;
   transition: all 1s ease-in-out;
@@ -63,26 +94,31 @@ select:focus {
 }
 
 .text-box select {
-  background-color: darksalmon;
+  background-color: var(--secondary-color);
+  font-family: "Quicksand", sans-serif;
   border: 0;
   color: #fff;
-  font-size: 12px;
+  font-size: 18px;
   height: 30px;
   width: 100%;
 }
 
 .text-box textarea {
   border: 1px #dadada solid;
+  color: #000;
   border-radius: 4px;
-  font-size: 16px;
+  font-size: 18px;
   padding: 8px;
   margin: 15px 0;
   width: 100%;
   height: 150px;
+  font-family: "Quicksand", sans-serif;
 }
 
 .text-box .btn {
   width: 100%;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
 }
 
 .text-box .close {
@@ -91,52 +127,11 @@ select:focus {
   cursor: pointer;
 }
 
-.box {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
+.speaker,
+.stop {
+  width: 40px;
+  height: 40px;
+  margin-left: 1400px;
+  padding: 2px;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  transition: box-shadow 0.2s ease-out;
-}
-
-.box.active {
-  box-shadow: 0 0 10px 5px darksalmon;
-}
-
-.box img {
-  width: 100%;
-  object-fit: cover;
-  height: 200px;
-}
-
-.box .info {
-  background-color: darksalmon;
-  color: #fff;
-  font-size: 18px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 10px;
-  text-align: center;
-  height: 100%;
-}
-
-@media (max-width: 1100px) {
-  main {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 760px) {
-  main {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  main {
-    grid-template-columns: 1fr;
-  }
 }
