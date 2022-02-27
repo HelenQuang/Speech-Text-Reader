@@ -1,4 +1,4 @@
-## Speech Text Reader
+## Text Speech Reader (Small Learning Project)
 
 A text to speech app for non-verbal people. Pre-made buttons and custom text speech. This project uses the Web Speech API
 
